@@ -1,0 +1,52 @@
+    @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#sidebar {
+    transition: all 0.8s cubic-bezier(0, 0.77, 0.58, 1);
+    left: 0;
+    width: 100%;
+    height:-webkit-fill-available;
+}
+
+[x-cloak] {
+    display: none;
+}
+
+#sidebar.show {
+    transform: translateX(0);
+    
+}
+#btnSidebarToggler {
+    position: fixed;
+
+    /* Add other styling as needed */
+}
+  
+/* @media (min-width:1376px){
+   
+    .owl-carousel1 .owl-stage-outer{
+        @apply pl-10  
+    }
+} */
+
+ul.marker1 li a::before{
+    @apply content-[''] absolute -left-[5px] top-1/2 -translate-y-1/2 w-3 h-3 bg-blood-orange opacity-0
+}
+ul.marker1 li a::after{
+    @apply content-[''] absolute -left-px top-1/2 -translate-y-1/2 w-1 h-1 bg-blood-orange opacity-0
+}
+ul.marker1 li a:hover::before{ 
+    @apply opacity-30 
+}
+ul.marker1 li a:hover::after{
+    @apply opacity-100 
+}
+body.scrolled header nav{
+    @apply !bg-white
+}
+@media (max-width:991px){
+    footer div.pad{
+        @apply pb-8 pt-30
+    }
+}
